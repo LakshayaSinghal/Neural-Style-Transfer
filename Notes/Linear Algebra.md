@@ -13,7 +13,7 @@ Multiplying a vector by a scalar changes the magnitude.
 
 Vectors have geometrical and mathematical reresentation which are interchangeable.
 
-![Vector representation](Notes/Vector Representation.png "Vector")
+![Vector representation](/Notes/images/Vector%20Representaion.png "Vector")
 
 
 **Basis Vectors**
