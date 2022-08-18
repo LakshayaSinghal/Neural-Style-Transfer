@@ -43,9 +43,11 @@ Linear Transformation has 2 properties:
 1. All lines must remain lines.
 2. Origin must remain fixed in place
 
+Grid lines remain parallel and evenly spaced.
+
 ![Linear Transformation](/Notes/images/Linear%20Transformation%20.png "Linear Transfoormation")
 
-Grid lines become parallel and evenly spaced.
+
 
 
 To explain this numerically, we only need to know and define the transformation of i^ and j^ (and k^ depending upon number of dimensions)
@@ -55,6 +57,7 @@ Since all vectors in a space can be representesd by i^ and j^, we need to replac
 ![Numerical Transformation](/Notes/images/Linear%20Transformation%20Numerically.png "Numerical Transformation")
 
 Example:
+
 ![Example](/Notes/images/Transformation%20Example.png "Example")
 
 The next example shows a generalized transformation. It also shows the represenation used where the given 2x2 matrix gives the transformed position of the basis vectors and x,y and the positions of a random vector.
@@ -62,3 +65,36 @@ The next example shows a generalized transformation. It also shows the represena
 The first column in 2x2 matrix is the transformed postion of first basis vector and second column is the transformed postion of 2x2 matrix.
 
 ![Generalized](/Notes/images/Generalized%20example%20with%20representation.png "Generalized")
+
+
+Assume multiple transformations happen in a sequence, then the single transformation that has the same effect as the multiple transformations is called a **composition**.
+
+For eg, a rotation then a shear happens:
+
+![Composition](/Notes/images/composition.png "Compposition")
+
+The composition is the product of the 2 matrices.
+The transformation are read right to left, meaning the leftest most transformation happens first.
+
+General Method for Matrix multiplication to obtain a composition:
+
+This follows from Linear transformation since a composition is a sequence of linear transformations.
+
+![Step 1](/Notes/images/composition%201.png "step 1")
+
+The first column in M1 gives the location i^ after first transformation.
+
+![Step 2](/Notes/images/composition%202.png "step 2")
+
+Similarly, the second column in M1 gives the location of j^ after first transformation.
+
+![Step 3](/Notes/images/composition%203.png "step 3")
+
+![Step 4](/Notes/images/composition%204.png "step 4")
+
+
+
+**Does order of M1 and M2 matter?**
+**Yes**, since the second transformation happens wrt the first transformation. The order of transformation hence changes the composition.
+
+Matrices follow Associativity where (AB)C = A(BC) but this is intuitive since in both cases, the order of transformation doesn't change
