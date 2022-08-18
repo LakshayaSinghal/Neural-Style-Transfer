@@ -129,3 +129,61 @@ For 0, the determinant shows that the transformation converted the space into a 
 
 Also, det(M1M2) = det(M1)det(M2)
 
+
+## Matrcies and vaectors uses
+
+Matrices can be used to solve a linear system of equations.
+
+A set of linear equations can be converted to a set of matrices or vectors as follows
+
+![Linear system of equations](/Notes/images/linear%20system%20of%20eqn%20using%20matrix.png "Linear system of equations")
+
+A shown above, the vectors can be visualized as an x,y,z vector undergoing a transformation A to give -3,0,2 vector
+
+To solve this we will use the concept of **Inverse Matrices**
+
+To think of it in geometric representation, an inverse matrix A<sup>-1</sup> is a matrix that reverses the transformation produced by the matrix A.
+
+Hence, the matrix v when transformed by A<sup>-1</sup> gives matrix x,y,z.
+
+When a matrix is multipled by its inverse, it gives an identity matrix which in the world of matrix and vectors basically means 1 and the transformation produced by it is the matrix itself.
+
+![Inverse matrix](/Notes/images/INverse%20matrix.png "Inverse Matrix")
+
+![Inverse matrix 1](/Notes/images/inverse%20matrix%201.png "Inverse matrix 1")
+
+
+In case the determinant of A is 0, this means that A transformed a plane to a line. Therefore, the transformation of A<sup>-1</sup> is to comvert this line into a plane. Similar logic goes for 3d, where A inverse will have to convert a plane or a line into 3d space. Therefore, no Inverse exists.
+
+A solution is possible if the vector after transformation A lies on the line.
+
+This is also used to define **Rank**
+
+Rank is the number of dimensions in the output after transformation by a matrix A.
+
+For a 2d matrix, the highest rank can be 2.
+For a 3d matrix, the highest rank can be 3. 
+
+If the rank is lesser than the the number of dimensions before transformation, it means the transformation collapses the space to the number of dimension equal to the rank.
+
+The set of all possibles output of a matrix transformation is called the columnspace.
+
+The number of columns in the transformation matrix gives us the location of each basis vector after transformation which is turn gives us the span.
+The span gives us all the possible outputs.
+
+Therefore, the column space is the span of the columns of the matrix.
+
+So if the rank of matrix is the same as the column of a matrix, its called as full rank.
+
+We know that the origin is always at the same place in linear transformation. So, when a space is squished by a transformation, say, a plane squieshed down to a line, there is a whole set of vectors passing through 
+
+![null space](/Notes/images/null1.png "null space")
+![null space](/Notes/images/null2.png "null space")
+![null space](/Notes/images/null3.png "null space")
+
+Similarly, for a 3d vector, a whole line of vectors gets squished to origin when the space is transforned to a plane and a whole plan of vectors gets squished to the origin when the space is transformed into a line.
+
+This set of vectors is called as **null space** or **kernel**
+
+
+## Non square matrix
