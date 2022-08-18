@@ -97,4 +97,35 @@ Similarly, the second column in M1 gives the location of j^ after first transfor
 **Does order of M1 and M2 matter?**
 **Yes**, since the second transformation happens wrt the first transformation. The order of transformation hence changes the composition.
 
-Matrices follow Associativity where (AB)C = A(BC) but this is intuitive since in both cases, the order of transformation doesn't change
+Matrices follow Associativity where (AB)C = A(BC) but this is intuitive since in both cases, the order of transformation doesn't change.
+
+
+All the above concepts translate easily to higher dimensions.
+
+The three basis vectors used are _i^_ (x-axis) , _j^(y-axis)_ and _k^(z-axis)_.
+
+Linear transformation in 3d:
+
+!["Linear transformation in 3d"](/Notes/images/3d%20transformation.png "Linear transformation in 3d")
+
+Composition in 3d:
+
+!["Composition in 3d"](/Notes/images/3d%20compositon.png "Composition in 3d")
+
+
+## Determinants
+
+Determinants represent the factor by which the area or volume of a given space changes when undergoing linear transformation.
+
+For eg, in a 2d space, if the area of a unit area A becomes 2A after transformation, the determinant of the transformation is 2.
+If the determinant is negative, it means the area was flipped.
+If the determinant is 0, it means the transformation converted the space to a line or a dot.
+
+
+In 3d space, the determinant gives us factor of change of volume.
+For a positive real number, the determinant is the factor of change of volume.
+For a negative real number, the determinant shows that the the directions of any 2 basis vectors were swapped.
+For 0, the determinant shows that the transformation converted the space into a plane, a line or a dot.
+
+Also, det(M1M2) = det(M1)det(M2)
+
