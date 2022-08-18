@@ -1,5 +1,8 @@
 # Linear Algebra
 
+[Linear Algebra by 3B1B](https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B)
+
+
 **Vector**
 
 Physics Perspective - _Arrow with Direction and Length_
@@ -175,7 +178,7 @@ Therefore, the column space is the span of the columns of the matrix.
 
 So if the rank of matrix is the same as the column of a matrix, its called as full rank.
 
-We know that the origin is always at the same place in linear transformation. So, when a space is squished by a transformation, say, a plane squieshed down to a line, there is a whole set of vectors passing through 
+We know that the origin is always at the same place in linear transformation. So, when a space is squished by a transformation, say, a plane squieshed down to a line, there is a whole set of vectors passing through origin that is squished to the origin.
 
 ![null space](/Notes/images/null1.png "null space")
 ![null space](/Notes/images/null2.png "null space")
@@ -186,4 +189,26 @@ Similarly, for a 3d vector, a whole line of vectors gets squished to origin when
 This set of vectors is called as **null space** or **kernel**
 
 
-## Non square matrix
+## Dot Product
+
+Imagine projecting a vector _a_ onto a vector _b_, then the multiplication of length of _b_ and length of projection of _a_ gives us the dot product of _a_ and _b_. We can also take projection of _b_ on _a_.
+It is a useful tool for understanding projection and for testing whether or not vectors tend to point in the same direction.
+
+## Cross Product
+
+The cross product of 2 products gives us the area of parallelogram formed by the vectors
+. The sign of the cross product depends upon the orientation of the vectors, which can be found using right hand thumb screw rule.
+
+Since a matrix of a vector represents the transformation of i^ and j^ to that vector, a determinant of any 2 vectors, gives us the are between them.
+
+In a true sense, cross product of any 2 vectors gives us a new 3d vector perpendicular to both the vectors. The direction of the cross product can be found using right hand thumb screw rule.
+
+
+## Eigenvectors and Eigenvalues
+
+Consider a linear transformation, usually the direction of vectors changes. But there are some vectors whose direction does not change. Such vectors are called **Eigenvectors**. Due to linearity, there is a line of all such vectors, each having the same direction. The factor by which the vectors get squished or stretched by the transformation is called **Eigenvalues**
+
+For roation in 3d space, the rotation happens around an axis, this axis doesnt change position and direction and hence it is an eigenvector. Also there is no stretching or squishing, hence the eigen value is 1.
+
+For explanation for computation of eigenvectors and eigen values refer this video - [Eigenvectors and Eigenvalues](https://www.youtube.com/watch?v=PFDu9oVAE-g&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=14 "Eigen vectors and Eigenvalues")
+
