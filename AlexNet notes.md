@@ -17,6 +17,8 @@ We also need a model with large learning capacity. There is a lot of data we don
  8. Output is given by a 1000 way Softmax layer.
  9. The kernels of the second, fourth, and fifth convolutional layers are connected only to those kernel maps in the previous layer which reside on the same GPU.
  10. Overfitting prevention measures:
+     
      a. Data Augmentation: From each 256x256 image, 5 224x224 patches were taken(4 corners and 1 center) and they were also flipped horizontally. Also, PCA was performed on the set of RGB pixel values.
+     
      b. Dropout: For each training epoch, nodes were randomly dopped. This technique reduces complex co-adaptations of neurons, since a neuron cannot rely on the presence of particular other neurons. Used only in first 2 fully connected layers here.
  11. Stochastic gradient descent was used with a batch size of 128, momentum of 0.9.
