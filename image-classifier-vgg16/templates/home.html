@@ -1,0 +1,19 @@
+{%extends "layout.html" %}
+
+{% block content %}
+
+<form class = "p-3 text-center" action="/" method="post" enctype="multipart/form-data" >
+    <input class="form-control" type="file" name="imagefile">
+    <input class= "btn btn-primary mt-3" type="submit" value="predict">
+</form>
+
+
+{%if prediction1%}
+<img src="{{image}}" width="500" height="500">
+<h1><a href="https://www.google.com/search?q={{prediction1[0]}}" target = "blank">{{prediction1[0]}} {{prediction1[1]}}</a></h1>
+<h2><a href="https://www.google.com/search?q={{prediction2[0]}}" target = "blank">{{prediction2[0]}} {{prediction2[1]}}</a></h2>
+<h3><a href="https://www.google.com/search?q={{prediction3[0]}}" target = "blank">{{prediction3[0]}} {{prediction3[1]}}</a></h3>
+
+{% endif %}
+
+{% endblock content %}
