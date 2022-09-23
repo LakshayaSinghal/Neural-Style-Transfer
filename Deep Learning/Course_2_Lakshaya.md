@@ -1,6 +1,6 @@
 
 
-## Bias and Vaariance
+## Bias and Variance
 
 ![Bias and variance](/Deep%20Learning/assets/Bias%20And%20variance.png)
 
