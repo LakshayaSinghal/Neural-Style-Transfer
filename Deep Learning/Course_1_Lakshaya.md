@@ -4,7 +4,7 @@
 
 Neural Networks use supervised learning where the ntwork needs to be trained using predefined, labeled data so the netwrok is tuned to make predictions. The performance of the network depends upon the complexity and scale of network and also the amount of data used to train it.
 
-![Performance vs Data](/Deep%20Learning/assets/Data%20vs%20Performance.png"Performance vs Data")
+![Performance vs Data](/Deep%20Learning/assets/Data%20vs%20Performance.png "Performance vs Data")
 
 We have also seen algorthmic innovations in recent years that make the neural networks faster and better.
 
@@ -26,7 +26,7 @@ The output tells us the probability of a certain case. Therefore, the out y^ lie
 
 We can use logistic regression only but that doesn't necessarily give us values between 0 and 1. Hence, we also make use of the sigmoid function. It takes input of any real number and maps it between 0 and 1.
 
-![Sigmoid Function](/Deep%20Learning/assets/Sigmoid%20function.png"Sigmoid Function")
+![Sigmoid Function](/Deep%20Learning/assets/Sigmoid%20function.png)
 
 The function used for this is as follows
 
