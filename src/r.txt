@@ -1,0 +1,9 @@
+pillow=9.2.0=pypi_0
+pip=22.2.2=pypi_0
+numpy=1.23.2=pypi_0
+cudatoolkit=11.2.2=hbe64b41_10
+cudnn=8.1.0.77=h90431f1_0
+tensorflow=2.9.1=pypi_0
+tensorflow-estimator=2.9.0=pypi_0
+tensorflow-io-gcs-filesystem=0.26.0=pypi_0
+matplotlib=3.5.3=pypi_0
