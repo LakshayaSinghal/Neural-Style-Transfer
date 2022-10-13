@@ -53,18 +53,18 @@ for example :
     > python3 main.py -n 2000            
     
     runs style style transfer for 2000 iterations.
-    default no. of iterations is 5000.
+    default no. of iterations = 5000.
 
 -  choose alpha : 
     > python3 main.py --alpha 1e5
 
     runs style transfer with alpha = 1e5.
-    default alpha value is 1e4.
+    default alpha = 1e4.
 - choose beta value : 
     > python3 main.py --beta 1e-1           
 
     runs style transfer with beta = 1e-1.
-    default beta value is 1.
+    default beta = 1.
 
 - choose learning rate :     
     > python3 main.py -l 20         
