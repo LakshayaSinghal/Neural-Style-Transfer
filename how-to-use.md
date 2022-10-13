@@ -7,11 +7,11 @@
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) installed on system
 
 ## Installation
-1. Navigate to a directory of your choice and download 'environment.yml' and 'script.sh'.
+1. Navigate to a directory of your choice and download 'environment.yml' and 'script.sh'. enter following commands in terminal:
     > wget https://raw.githubusercontent.com/Greyless/Neural-Style-Transfer/Labeeb/environment.yml
 
     > wget https://raw.githubusercontent.com/Greyless/Neural-Style-Transfer/Labeeb/script.sh
-2. Open Terminal in that directory and run the following commands in order. They create a new conda environment, download the necessary dependencies and the source files in new folder 'nst'.<br> 
+2. Run the following commands in order. They create a new conda environment, download the necessary dependencies and the source files in new folder 'nst'.<br> 
 **Say yes to any installation asked**. the commands might take a while to complete.
 
     create environment : 
