@@ -11,8 +11,8 @@
     > wget https://raw.githubusercontent.com/Greyless/Neural-Style-Transfer/Labeeb/environment.yml
 
     > wget https://raw.githubusercontent.com/Greyless/Neural-Style-Transfer/Labeeb/script.sh
-2. Open Terminal in that directory and run the following commands in order. They create a new conda environment, download the necessary dependencies and the source files in new folder 'nst'. 
-Say yes to any installation asked. the commands might take a while to complete.
+2. Open Terminal in that directory and run the following commands in order. They create a new conda environment, download the necessary dependencies and the source files in new folder 'nst'.<br> 
+**Say yes to any installation asked**. the commands might take a while to complete.
 
     create environment : 
     >conda env create -f environment.yml
@@ -25,22 +25,21 @@ Say yes to any installation asked. the commands might take a while to complete.
 
     run script :
     >source script.sh
-3. navigate to the source folder :
-    > cd nst
-4. To perform Neural Style Transfer on your own images you can put the content and style image in the nst folder and run the following command
+
+3. You're all set! <br> To perform Neural Style Transfer on your own images **you can put the content and style image in the nst folder** and run the following command
     > python3 main.py
 
-    it'll ask you to specify the name of content and style images (including extensions like .png, .jpg, etc) and then run the style transfer.
-    The resulting images will be saved in 'res' directory.
+    it'll ask you to specify the name of content and style images (**including extensions** like .png, .jpg, etc) and then run the style transfer.
+    The **results will be saved in 'res' directory**.
     
-    if you run into any error regarding some DNN library or shared library not found, run the following command before running main.py
+    if you run into any error regarding some **DNN library or shared library not found**, run the following command before running main.py
     > export LD\_LIBRARY_PATH=LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
 
 
 ---
 
 
-As a bonus point you can also run Style Transfer with hyperparameters of your choice.
+As a bonus point you can also **run Style Transfer with hyperparameters of your choice**.
 
 To do that run :
 
