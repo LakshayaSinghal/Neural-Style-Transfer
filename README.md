@@ -1,8 +1,6 @@
 # Neural-Style-Transfer
 
-![Neural Style Transfer Input](/assets/ryuk%20starry%20night%20input.png)
-
-![Neural Style Transfer output](/assets/starry-night%20result.png)
+![Neural Style Transfer Result](/assets/nst%20result.gif)
 
 
 # About The Project
@@ -106,31 +104,27 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 The principle of neural style transfer is to define two distance functions, one that describes how different the content of two images are, Lcontent, and one that describes the difference between the two images in terms of their style, Lstyle. Then, given three images, a desired style image, a desired content image, and the input image (initialized with the content image), we try to transform the input image to minimize the content distance with the content image and its style distance with the style image.
 
+![NST flowchart 1](/assets/NST.png)
+
 In summary, we’ll take the base input image, a content image that we want to match, and the style image that we want to match. We’ll transform the base input image by minimizing the content and style distances (losses) with backpropagation, creating an image that matches the content of the content image and the style of the style image.
 
-![NST flowchart](/assets/NST.png)
+![NST flowchart 2](/assets/Flowchart2.png)
+
+
+
 
 # Results
 
-![example1in](/assets/cat%20abstract%20input.png)
-![example1out](/assets/cat%20abstract%20result.png)
-***
-![example2in](/assets/green%20input.png)
-![example2out](/assets/green%20result.png)
-***
-![example3in](/assets/ryuk%20abstract%20inout.png)
-![example3out](/assets/ryuk%20abstract%20output.png)
-***
-![example4in](/assets/sketch%20flower%20input.png)
-![example4out](/assets/sketch%20flower%20output.png)
-***
-![example5in](/assets/ryuk%20starry%20night%20input.png)
-![example4out](/assets/starry-night%20result.png)
+![NST result](/assets/nst%20result.gif)
 ***
 
 # Future Works
 
-We enjoyed working with Neural Networks during our project and plan to continue exploring to make new projects. We are particularly interested in exploring GANs to achieve Neural Style Transfer and to make new projects using GANs.
+We enjoyed working on GANs during our project and plan to continue exploring the field for further applications and make new projects. Some of the points that We think this project can grow or be a base for are listed below.
+
+ 1. Trying different databases to get an idea of preprocessing different types of images and building models specific to those input image types.
+ 2. This is a project applied on individual Image to Image translation. Further the model can be used to process black and white sketch video frames to generate colored videos.
+
 
 # Contributors
 * [Labeeb Asari](https://github.com/labeeb-7z)
