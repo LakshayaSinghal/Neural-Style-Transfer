@@ -24,6 +24,64 @@ This section contains the technologies we used for this project.
 * [Google Colab](https://colab.research.google.com/)
 
 
+## File Structure
+
+    ├── Alex_Net_CIFAR10                   # Folder for Alex_Net Implementation
+        ├── assets
+        ├── AlexNet notes.md
+        ├── AlexNet paper.pdf
+        ├── AlexNet_IMplementation_CIFAR10.ipynb
+    ├── Coursera Assignments               # Coursera Assignments
+        ├── C1_Lakshaya
+        ├── C2_Lakshaya
+        ├── C4_Lakshaya
+        ├── course - 1 : DL and NN_Labeeb
+        ├── course - 2 : Improving DNNs and hyperparameter tuning_Labeeb
+        ├── course - 4 : CNNs_Labeeb
+    ├── Deep Learning                      # Notes on Deep Learning
+        ├── C1 - Neural Networks and DL
+        ├── C2 - Improving DNNs and HP tuning
+        ├── C4 - CNNs
+        ├── assets
+        ├── Course_1_Lakshaya.md
+        ├── Course_2_Lakshaya.md
+        ├── Course_4_Lakshaya.md
+    ├── GANs                               # Face Generation using GANs
+        ├── assets
+        ├── face_generation_using_GANs.ipynb
+        ├── readme.md
+    ├── Linear Algebra (3B1B)              # Linear Algebra Notes
+        ├── assets
+        ├── Linear_Algebra_Lakshaya.md
+    ├── MNIST_Digit_Recognition            # Digit REcognition from scratch
+        ├── assets
+        ├── Digit_Recognition.ipynb
+        ├── tf-digitRecogntion.ipynb    
+    ├── Report                             # Project report
+    ├── assets                             # assets for README
+    ├── cyclegans                          # CyckeGANs Style Transfer Implementation
+        ├── StyleTransfer-CycleGANs.ipynb
+    ├── src                                # Source code of NEural Style Transfer
+        ├── assets
+        ├── res
+        ├── NST.ipynb
+        ├── content.jpg
+        ├── cost.py
+        ├── dependencies.py
+        ├── features.py
+        ├── load.py
+        ├── main.py
+        ├── style.jpg
+        ├── style_transfer.py
+    ├── vgg-16                             # VGG-16 tensorflow implementation
+        ├── assets
+        ├── VGG-16_Paper.pdf
+        ├── VGG_16.ipynb
+    ├── LICENSE                            # MIT license
+    ├── README.md                          #readme
+    ├── enviroment.yml
+    ├── script.sh
+
 # Getting Started
 
 ## Prerequisites
