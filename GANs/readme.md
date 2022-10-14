@@ -1,15 +1,16 @@
 ## Examples : 
-<img src="https://i.imgur.com/DY8crMy.png" alt="drawing" width="200"/>
-<img src="https://i.imgur.com/dqMMkCU.png" alt="drawing" width="200"/>
-<img src="https://i.imgur.com/XTQOziN.png" alt="drawing" width="200"/>
+<p float="left">
+<img src="https://i.imgur.com/DY8crMy.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/dqMMkCU.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/XTQOziN.png" alt="drawing" width="300"/>
 
-<img src="https://i.imgur.com/ypDQZgK.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/ypDQZgK.png" alt="drawing" width="300"/>
 
 
-<img src="https://i.imgur.com/GegWSps.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/GegWSps.png" alt="drawing" width="300"/>
 
-<img src="https://i.imgur.com/3AIbNb8.png" alt="drawing" width="200"/>
-
+<img src="https://i.imgur.com/3AIbNb8.png" alt="drawing" width="300"/>
+</p>
 
 # Generative Adversial Networks or GANs
 
