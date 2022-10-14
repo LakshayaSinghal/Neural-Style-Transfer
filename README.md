@@ -176,6 +176,18 @@ In summary, we’ll take the base input image, a content image that we want to m
 ![NST result](/assets/nst%20result.gif)
 ***
 
+# Troubleshooting 
+- alpha/beta ratio : This is probably the most important part of any NST implementation. We started with a ratio of 5 which resulted in style image completely overshadowing the content image. We referenced the original paper and found one line which solved the problem ![](https://i.imgur.com/FepruAx.png)
+
+
+- Noise in generated image  : Starting with a randomly generated images can lead to some of the noise still persisting till the end, we figured by changing the hpyerparameters such as learning_rate, epsilon for Adam optimizer, number of iterations, content weight(alpha) and style weight(beta) can lead to significant reduction in noise
+
+- Memory leak in tensorflow : By default tensorflow allocates all of the available gpu on the device to the current process. Having a mere 4GB Nvidia 1650 and loading models as big as VGG-19, it was a great hassle during training. Also memory fragmentation caused regular OOM error. We solved it by manually killing the process after each instances and settinig some enviornment variables in tensorflow.![](https://i.imgur.com/joycHJ5.png)
+![](https://i.imgur.com/6S3cHQ0.png)
+
+- Training a GAN model : Its a well known fact that GANs are extremely hard to train. Not having access to high compute resources and training models from scratch required alot of patience and iteration. Google Colab has limits beyond which you have to wait for days to connect to a runtime again. Training locally was the option left. And it was a very time consuming process even for a mere 10 epochs.
+- Getting access to DGX station : After realizing its literally impossible to train a cycleGAN consisting of 4 Deep ConvNets on our local machine, we started looking for alternatives. It took us a about a week after alot of arrangements to finally get access to VJTI's DGX A100.  It was a huge boost to our progress and allowed us to train for over 100 epochs in just around 2 days.
+
 # Future Works
 
 We enjoyed working on GANs during our project and plan to continue exploring the field for further applications and make new projects. Some of the points that We think this project can grow or be a base for are listed below.
