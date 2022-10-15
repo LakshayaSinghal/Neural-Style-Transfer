@@ -1,6 +1,7 @@
 # Neural-Style-Transfer
 
-![Neural Style Transfer Result](/assets/nst%20result.gif)
+![Neural Style Transfer Result](./assets/nst%20result.gif)
+![CycleGAN Style Transfer](./assets/CycleGANs%20result.gif)
 
 
 # About The Project
@@ -13,6 +14,8 @@ The aim of this project is to use transfer learning and use a trained neural net
 
 Neural style transfer is an optimization technique used to take two images—a content image and a style reference image (such as an artwork by a famous painter)—and blend them together so the output image looks like the content image, but “painted” in the style of the style reference image. This requires an already trained Neural Network (VGG-19 in this case) and while the output is being generated, the parameters of the Neural Network stays the same but the pixels in the ouput image are changed every iteration.
 [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
+
+We also achieved style transfer using CycleGANs. The beauty of CycleGAN is that X and Y do not have to be paired. This means that we can give CycleGAN any images for X and any images for Y, even if each image in Y is not the direct mapping of the related image in X.
 
 ## Tech Stack
 This section contains the technologies we used for this project.
@@ -162,31 +165,44 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 The principle of neural style transfer is to define two distance functions, one that describes how different the content of two images are, Lcontent, and one that describes the difference between the two images in terms of their style, Lstyle. Then, given three images, a desired style image, a desired content image, and the input image (initialized with the content image), we try to transform the input image to minimize the content distance with the content image and its style distance with the style image.
 
-![NST flowchart 1](/assets/NST.png)
+![NST flowchart 1](./assets/NST.png)
 
 In summary, we’ll take the base input image, a content image that we want to match, and the style image that we want to match. We’ll transform the base input image by minimizing the content and style distances (losses) with backpropagation, creating an image that matches the content of the content image and the style of the style image.
 
-![NST flowchart 2](/assets/Flowchart2.png)
+![NST flowchart 2](./assets/Flowchart2.png)
 
+**Using CycleGANs**
 
+The goal of a CycleGAN is simple, learn a mapping between some dataset, X, and another dataset, Y. For example, X could be a dataset of horse images and Y a dataset of zebra images. CycleGANs are a novel approach for translating an image from a source domain A to a target domain B. One of the cool feature of CycleGANs is that it doesn’t require paired training data to produce stunning style transfer results.
+
+A CycleGAN tries to learn a Generator network, which, learns two mappings. CycleGANs train two Generators and two Discriminators networks. which differs from most of the GANs with a single Generator and Discriminator network.
+
+![CycleGANs](./assets/cycleGANs.png)
 
 
 # Results
 
-![NST result](/assets/nst%20result.gif)
+## Neural Style Transfer
+
+![NST result](./assets/nst%20result.gif)
+
+## CycleGAN Style Transfer
+
+![CycleGAN Style Transfer](./assets/CycleGANs%20result.gif)
+
 ***
 
 # Troubleshooting 
-- alpha/beta ratio : This is probably the most important part of any NST implementation. We started with a ratio of 5 which resulted in style image completely overshadowing the content image. We referenced the original paper and found one line which solved the problem ![](https://i.imgur.com/FepruAx.png)
+- **alpha/beta ratio** : This is probably the most important part of any NST implementation. We started with a ratio of 5 which resulted in style image completely overshadowing the content image. We referenced the original paper and found **one line which solved the problem** ![](https://i.imgur.com/FepruAx.png)
 
 
-- Noise in generated image  : Starting with a randomly generated images can lead to some of the noise still persisting till the end, we figured by changing the hpyerparameters such as learning_rate, epsilon for Adam optimizer, number of iterations, content weight(alpha) and style weight(beta) can lead to significant reduction in noise
+- **Noise in generated image**  : Starting with a randomly generated images can lead to some of the noise still persisting till the end, we figured by changing **the hpyerparameters such as learning_rate, epsilon for Adam optimizer, number of iterations, content weight(alpha) and style weight(beta)** can lead to significant reduction in noise
 
-- Memory leak in tensorflow : By default tensorflow allocates all of the available gpu on the device to the current process. Having a mere 4GB Nvidia 1650 and loading models as big as VGG-19, it was a great hassle during training. Also memory fragmentation caused regular OOM error. We solved it by manually killing the process after each instances and settinig some enviornment variables in tensorflow.![](https://i.imgur.com/joycHJ5.png)
+- **Memory leak in tensorflow** : By default tensorflow allocates all of the available gpu on the device to the current process. Having a mere 4GB Nvidia 1650 and loading models as big as VGG-19, it was a great hassle during training. Also memory fragmentation caused regular OOM error. We solved it by **manually killing the process** after each instances and settinig** some enviornment variables in tensorflow**.![](https://i.imgur.com/joycHJ5.png)
 ![](https://i.imgur.com/6S3cHQ0.png)
 
-- Training a GAN model : Its a well known fact that GANs are extremely hard to train. Not having access to high compute resources and training models from scratch required alot of patience and iteration. Google Colab has limits beyond which you have to wait for days to connect to a runtime again. Training locally was the option left. And it was a very time consuming process even for a mere 10 epochs.
-- Getting access to DGX station : After realizing its literally impossible to train a cycleGAN consisting of 4 Deep ConvNets on our local machine, we started looking for alternatives. It took us a about a week after alot of arrangements to finally get access to VJTI's DGX A100.  It was a huge boost to our progress and allowed us to train for over 100 epochs in just around 2 days.
+- **Training a GAN model** : Its a well known fact that GANs are extremely hard to train. Not having access to high compute resources and training models from scratch required alot of patience and iteration. Google Colab has limits beyond which you have to wait for days to connect to a runtime again. Training locally was the option left. And it was a very time consuming process even for a mere 10 epochs.
+- **Getting access to DGX station** : After realizing its literally impossible to train a cycleGAN consisting of 4 Deep ConvNets on our local machine, we started looking for alternatives. It took us a about a week after alot of arrangements to finally get access to VJTI's DGX A100.  It was a huge boost to our progress and allowed us to train for over 100 epochs in just around 2 days.
 
 # Future Works
 
