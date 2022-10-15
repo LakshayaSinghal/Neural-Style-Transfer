@@ -24,6 +24,64 @@ This section contains the technologies we used for this project.
 * [Google Colab](https://colab.research.google.com/)
 
 
+## File Structure
+
+    ├── Alex_Net_CIFAR10                   # Folder for Alex_Net Implementation
+        ├── assets
+        ├── AlexNet notes.md
+        ├── AlexNet paper.pdf
+        ├── AlexNet_IMplementation_CIFAR10.ipynb
+    ├── Coursera Assignments               # Coursera Assignments
+        ├── C1_Lakshaya
+        ├── C2_Lakshaya
+        ├── C4_Lakshaya
+        ├── course - 1 : DL and NN_Labeeb
+        ├── course - 2 : Improving DNNs and hyperparameter tuning_Labeeb
+        ├── course - 4 : CNNs_Labeeb
+    ├── Deep Learning                      # Notes on Deep Learning
+        ├── C1 - Neural Networks and DL
+        ├── C2 - Improving DNNs and HP tuning
+        ├── C4 - CNNs
+        ├── assets
+        ├── Course_1_Lakshaya.md
+        ├── Course_2_Lakshaya.md
+        ├── Course_4_Lakshaya.md
+    ├── GANs                               # Face Generation using GANs
+        ├── assets
+        ├── face_generation_using_GANs.ipynb
+        ├── readme.md
+    ├── Linear Algebra (3B1B)              # Linear Algebra Notes
+        ├── assets
+        ├── Linear_Algebra_Lakshaya.md
+    ├── MNIST_Digit_Recognition            # Digit REcognition from scratch
+        ├── assets
+        ├── Digit_Recognition.ipynb
+        ├── tf-digitRecogntion.ipynb    
+    ├── Report                             # Project report
+    ├── assets                             # assets for README
+    ├── cyclegans                          # CyckeGANs Style Transfer Implementation
+        ├── StyleTransfer-CycleGANs.ipynb
+    ├── src                                # Source code of NEural Style Transfer
+        ├── assets
+        ├── res
+        ├── NST.ipynb
+        ├── content.jpg
+        ├── cost.py
+        ├── dependencies.py
+        ├── features.py
+        ├── load.py
+        ├── main.py
+        ├── style.jpg
+        ├── style_transfer.py
+    ├── vgg-16                             # VGG-16 tensorflow implementation
+        ├── assets
+        ├── VGG-16_Paper.pdf
+        ├── VGG_16.ipynb
+    ├── LICENSE                            # MIT license
+    ├── README.md                          #readme
+    ├── enviroment.yml
+    ├── script.sh
+
 # Getting Started
 
 ## Prerequisites
@@ -118,6 +176,18 @@ In summary, we’ll take the base input image, a content image that we want to m
 ![NST result](/assets/nst%20result.gif)
 ***
 
+# Troubleshooting 
+- alpha/beta ratio : This is probably the most important part of any NST implementation. We started with a ratio of 5 which resulted in style image completely overshadowing the content image. We referenced the original paper and found one line which solved the problem ![](https://i.imgur.com/FepruAx.png)
+
+
+- Noise in generated image  : Starting with a randomly generated images can lead to some of the noise still persisting till the end, we figured by changing the hpyerparameters such as learning_rate, epsilon for Adam optimizer, number of iterations, content weight(alpha) and style weight(beta) can lead to significant reduction in noise
+
+- Memory leak in tensorflow : By default tensorflow allocates all of the available gpu on the device to the current process. Having a mere 4GB Nvidia 1650 and loading models as big as VGG-19, it was a great hassle during training. Also memory fragmentation caused regular OOM error. We solved it by manually killing the process after each instances and settinig some enviornment variables in tensorflow.![](https://i.imgur.com/joycHJ5.png)
+![](https://i.imgur.com/6S3cHQ0.png)
+
+- Training a GAN model : Its a well known fact that GANs are extremely hard to train. Not having access to high compute resources and training models from scratch required alot of patience and iteration. Google Colab has limits beyond which you have to wait for days to connect to a runtime again. Training locally was the option left. And it was a very time consuming process even for a mere 10 epochs.
+- Getting access to DGX station : After realizing its literally impossible to train a cycleGAN consisting of 4 Deep ConvNets on our local machine, we started looking for alternatives. It took us a about a week after alot of arrangements to finally get access to VJTI's DGX A100.  It was a huge boost to our progress and allowed us to train for over 100 epochs in just around 2 days.
+
 # Future Works
 
 We enjoyed working on GANs during our project and plan to continue exploring the field for further applications and make new projects. Some of the points that We think this project can grow or be a base for are listed below.
@@ -131,7 +201,7 @@ We enjoyed working on GANs during our project and plan to continue exploring the
 * [Lakshaya Singhal](https://github.com/Greyless)
 
 # Acknowledgements and Resources
-* [SRA VJTI](https://www.sravjti.in/) Eklavya 2021  
+* [SRA VJTI](https://www.sravjti.in/) Eklavya 2022  
 * Referred [this](https://www.tensorflow.org/) for understanding the use of tensorflow
 * Completed [these](https://www.coursera.org/specializations/deep-learning) 3 courses for understanding Deep Learning concepts like Convulational Neural networks and learnt to make a DL model
 * Referred [this](https://www.tensorflow.org/tutorials/generative/pix2pix) for understanding code statements
