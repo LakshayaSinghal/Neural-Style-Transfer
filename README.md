@@ -201,7 +201,7 @@ We enjoyed working on GANs during our project and plan to continue exploring the
 * [Lakshaya Singhal](https://github.com/Greyless)
 
 # Acknowledgements and Resources
-* [SRA VJTI](https://www.sravjti.in/) Eklavya 2021  
+* [SRA VJTI](https://www.sravjti.in/) Eklavya 2022  
 * Referred [this](https://www.tensorflow.org/) for understanding the use of tensorflow
 * Completed [these](https://www.coursera.org/specializations/deep-learning) 3 courses for understanding Deep Learning concepts like Convulational Neural networks and learnt to make a DL model
 * Referred [this](https://www.tensorflow.org/tutorials/generative/pix2pix) for understanding code statements
